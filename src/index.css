@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::selection {
+  background-color: #6b59f57a;
+  color: #010313;
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #2a1454;
+  border-radius: 30rem;
+  margin-block: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0.1875rem solid #2a1454;
+  background: #8750f7;
+  border-radius: 30rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(149, 96, 255, 0.714);
+}
+
+body {
+  line-height: 2;
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1464px) {
+  html {
+    font-size: 1.11vw;
+  }
+}
