@@ -1,0 +1,7 @@
+.hire-me:hover .arrow-up {
+  rotate: 360deg;
+}
+
+.nav-container > li > a:focus {
+  background-color: transparent !important;
+}
