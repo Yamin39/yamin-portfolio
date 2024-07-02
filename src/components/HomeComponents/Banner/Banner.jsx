@@ -3,6 +3,7 @@ import { FiGithub } from "react-icons/fi";
 import { LuDownload } from "react-icons/lu";
 import { RiTwitterXLine } from "react-icons/ri";
 import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
+import { Typewriter } from "react-simple-typewriter";
 import img from "../../../assets/images/yamin.jpg";
 
 const Banner = () => {
@@ -12,7 +13,10 @@ const Banner = () => {
         <div>
           <span className="text-sm">Web developer</span>
           <h1 className="text-4xl sm:text-5xl sm:leading-[3.75rem] font-semibold">
-            Hello I&apos;m <br /> <span className="text-primary-color">Mufazzal Hossain Yamin</span>
+            Hello I&apos;m <br />{" "}
+            <span className="text-primary-color">
+              <Typewriter words={["Mufazzal Hossain Yamin"]} typeSpeed={60} />
+            </span>
           </h1>
           <p className="max-w-[43.75rem] sm:text-xl font-light text-[#140C1C] leading-[1.875rem] mt-1">
             I am crafting websites with responsive design, modern UI/UX, and cutting-edge web technologies.
