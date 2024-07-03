@@ -6,7 +6,7 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <a className="hover:text-primary-color hover:bg-transparent" onClick={() => document.getElementById("banner").scrollIntoView()}>
+        <a className="hover:text-primary-color hover:bg-transparent" onClick={() => window.scrollTo(0, 0)}>
           Home
         </a>
       </li>
@@ -23,7 +23,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <nav className="mb-8">
+    <nav className="max-w-[1440px] w-10/12 mx-auto mb-8">
       <div className="py-3">
         <div className="navbar px-0 justify-between">
           <div>

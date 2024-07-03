@@ -1,6 +1,6 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
 import { Outlet } from "react-router-dom";
 import heroShape from "../assets/images/hero-shape.webp";
@@ -9,6 +9,26 @@ import Navbar from "../components/shared/Navbar/Navbar";
 // AOS.init();
 
 const Root = () => {
+  const [navbarBg, setNavbarBg] = useState("bg-transparent");
+
+  const changeNavbarBg = () => {
+    if (window.innerWidth > 330) {
+      if (window.scrollY > 75) {
+        setNavbarBg("bg-white");
+      } else {
+        setNavbarBg("bg-transparent");
+      }
+    } else {
+      if (window.scrollY > 55) {
+        setNavbarBg("bg-white");
+      } else {
+        setNavbarBg("bg-transparent");
+      }
+    }
+  };
+
+  window.addEventListener("scroll", changeNavbarBg);
+
   useEffect(() => {
     AOS.init({
       once: true, // Only animate elements once
@@ -18,11 +38,15 @@ const Root = () => {
     AOS.refresh(); // Refresh AOS to detect new elements
   }, []);
   return (
-    <div className="max-w-[1440px] min-h-screen w-10/12 mx-auto font-sora">
+    <div className="font-sora">
       <img className="absolute top-0 right-0 opacity-70" src={heroShape} />
       <div className="relative">
-        <Navbar></Navbar>
-        <Outlet></Outlet>
+        <div className={`${navbarBg} sticky top-0 z-50 duration-300`}>
+          <Navbar></Navbar>
+        </div>
+        <div className="max-w-[1440px] w-10/12 mx-auto">
+          <Outlet></Outlet>
+        </div>
       </div>
 
       {/* custom cursor */}
