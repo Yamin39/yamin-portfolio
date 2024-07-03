@@ -20,6 +20,11 @@ const Navbar = () => {
           Skills
         </a>
       </li>
+      <li>
+        <a className="hover:text-primary-color hover:bg-transparent" onClick={() => document.getElementById("educations").scrollIntoView()}>
+          Education
+        </a>
+      </li>
     </>
   );
   return (

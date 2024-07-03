@@ -8,55 +8,55 @@ const MySkills = () => {
     {
       name: "HTML",
       icon: <FaHtml5 className="text-8xl duration-500" />,
-      hoverColor: "#E54C21",
+      hoverColor: "hover:text-[#E54C21]",
       aosDelay: "100",
     },
     {
       name: "CSS",
       icon: <IoLogoCss3 className="text-8xl duration-500" />,
-      hoverColor: "#254BDD",
+      hoverColor: "hover:text-[#254BDD]",
       aosDelay: "200",
     },
     {
       name: "Tailwind CSS",
       icon: <RiTailwindCssFill className="text-8xl duration-500" />,
-      hoverColor: "#16B6B0",
+      hoverColor: "hover:text-[#16B6B0]",
       aosDelay: "300",
     },
     {
       name: "JavaScript",
       icon: <IoLogoJavascript className="text-8xl duration-500" />,
-      hoverColor: "#e6d346",
+      hoverColor: "hover:text-[#e6d346]",
       aosDelay: "400",
     },
     {
       name: "Firebase",
       icon: <IoLogoFirebase className="text-8xl duration-500" />,
-      hoverColor: "#f47811",
+      hoverColor: "hover:text-[#f47811]",
       aosDelay: "500",
     },
     {
       name: "ReactJS",
       icon: <FaReact className="text-8xl duration-500" />,
-      hoverColor: "#58C4DC",
+      hoverColor: "hover:text-[#58C4DC]",
       aosDelay: "600",
     },
     {
       name: "NodeJS",
       icon: <FaNodeJs className="text-8xl duration-500" />,
-      hoverColor: "#6DA55F",
+      hoverColor: "hover:text-[#6DA55F]",
       aosDelay: "700",
     },
     {
       name: "ExpressJS",
       icon: <SiExpress className="text-8xl duration-500" />,
-      hoverColor: "#B0C1D4",
+      hoverColor: "hover:text-[#B0C1D4]",
       aosDelay: "800",
     },
     {
       name: "MongoDB",
       icon: <SiMongodb className="text-8xl duration-500" />,
-      hoverColor: "#00684A",
+      hoverColor: "hover:text-[#00684A]",
       aosDelay: "900",
     },
   ];
@@ -70,6 +70,7 @@ const MySkills = () => {
     "Flowbite",
     "Framer",
     "NPM",
+    "EmailJS",
     "React Hook Form",
     "React Router",
     "TanStack Query",
@@ -79,7 +80,7 @@ const MySkills = () => {
     "Photoshop",
   ];
   return (
-    <div id="skills" className="mb-20">
+    <div id="skills" className="pt-[4.375rem] sm:pt-[7.5rem]">
       <div className="max-w-[41.25rem] mx-auto text-center">
         <h1 className="text-primary-gradient text-[2.5rem] font-bold" data-aos="fade-up" data-aos-delay="100">
           My Skills
@@ -94,7 +95,7 @@ const MySkills = () => {
         {skills.map((skill, i) => (
           <div
             key={i}
-            className={`min-w-[11.0625rem] fit flex flex-col justify-center items-center cursor-pointer hover:text-[${skill.hoverColor}] duration-500 p-6 sm:p-10 rounded-2xl bg-[#F6F3FC] border-[#D9D9D9] border-[0.05rem] sm:tooltip`}
+            className={`min-w-[11.0625rem] fit flex flex-col justify-center items-center cursor-pointer ${skill.hoverColor} duration-500 p-6 sm:p-10 rounded-2xl bg-[#F6F3FC] border-[#D9D9D9] border-[0.05rem] sm:tooltip`}
             data-tip={skill.name}
             data-aos="fade-up"
             data-aos-delay={skill.aosDelay}
