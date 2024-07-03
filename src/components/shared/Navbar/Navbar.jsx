@@ -32,16 +32,25 @@ const Navbar = () => {
       <div className="py-3">
         <div className="navbar px-0 justify-between">
           <div>
-            <div className="dropdown">
-              <div tabIndex={0} role="button" className="btn btn-ghost px-2 md:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-                </svg>
+            <div className="drawer z-50 md:hidden">
+              <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+              <div className="drawer-content">
+                {/* Page content here */}
+                <label htmlFor="my-drawer" className="btn btn-ghost px-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </label>
               </div>
-              <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
-                {navLinks}
-              </ul>
+              <div className="drawer-side">
+                <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+                <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                  {/* Sidebar content here */}
+                  {navLinks}
+                </ul>
+              </div>
             </div>
+
             <div>
               <Link to="/" className="flex items-center gap-3">
                 <p className="font-semibold text-2xl lg:text-3xl">
