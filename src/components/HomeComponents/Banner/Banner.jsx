@@ -9,7 +9,7 @@ import resume from "../../../assets/resume.pdf";
 
 const Banner = () => {
   return (
-    <div>
+    <div id="banner">
       <div className="flex justify-between items-center p-6 sm:p-12 md:pr-6 rounded-2xl bg-[#F6F3FC] border-[#D9D9D9] border-[0.05rem]">
         <div>
           <span className="text-sm" data-aos="fade-up" data-aos-once={true} data-aos-delay="100" data-aos-duration="700">

@@ -6,12 +6,17 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <a className="hover:text-primary-color hover:bg-transparent" href="#">
+        <a className="hover:text-primary-color hover:bg-transparent" onClick={() => document.getElementById("banner").scrollIntoView()}>
           Home
         </a>
       </li>
       <li>
-        <a className="hover:text-primary-color hover:bg-transparent" href="#">
+        <a className="hover:text-primary-color hover:bg-transparent" onClick={() => document.getElementById("about").scrollIntoView()}>
+          About
+        </a>
+      </li>
+      <li>
+        <a className="hover:text-primary-color hover:bg-transparent" onClick={() => document.getElementById("skills").scrollIntoView()}>
           Skills
         </a>
       </li>
