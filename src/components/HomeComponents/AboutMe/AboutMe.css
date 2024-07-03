@@ -18,9 +18,3 @@
     left: -1.75rem;
   }
 }
-
-.text-primary-gradient {
-  background: linear-gradient(to right, rgb(135, 80, 247) 0%, rgb(42, 20, 84) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}

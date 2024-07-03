@@ -37,6 +37,12 @@ body {
   line-height: 2;
 }
 
+.text-primary-gradient {
+  background: linear-gradient(to right, rgb(135, 80, 247) 0%, rgb(42, 20, 84) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media screen and (max-width: 640px) {
   html {
     font-size: 3.5vw;

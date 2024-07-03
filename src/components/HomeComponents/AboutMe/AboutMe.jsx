@@ -6,7 +6,7 @@ import "./AboutMe.css";
 
 const AboutMe = () => {
   return (
-    <div id="about" className="flex flex-col md:flex-row gap-20 md:gap-10 items-center justify-around my-[7.5rem]">
+    <div id="about" className="flex flex-col md:flex-row gap-20 md:gap-10 items-center justify-around mt-[7.5rem] mb-[3.75rem] sm:mb-[7.5rem]">
       <div className="sm:max-w-[40%]" data-aos="fade-up" data-aos-delay="100">
         <div
           className="relative max-w-[13rem] sm:max-w-[16.25rem] rounded-tl-[3.125rem] sm:rounded-tl-[6.25rem] rounded-br-[3.125rem] sm:rounded-br-[6.25rem] p-[0.375rem] bg-[#F6F3FC]"

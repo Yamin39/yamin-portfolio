@@ -58,8 +58,8 @@ const Root = () => {
           outerScale={2}
           outerAlpha={0}
           hasBlendMode={true}
-          // showSystemCursor={true}
-          showSystemCursor={window.innerWidth >= 768 ? false : true}
+          showSystemCursor={true}
+          // showSystemCursor={window.innerWidth >= 768 ? false : true}
           innerStyle={{
             backgroundColor: "black",
           }}
