@@ -1,6 +1,10 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Outlet } from "react-router-dom";
 import heroShape from "../assets/images/hero-shape.webp";
 import Navbar from "../components/shared/Navbar/Navbar";
+
+AOS.init();
 
 const Root = () => {
   return (
