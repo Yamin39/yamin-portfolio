@@ -5,6 +5,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
 import { Typewriter } from "react-simple-typewriter";
 import img from "../../../assets/images/yamin.jpg";
+import resume from "../../../assets/resume.pdf";
 
 const Banner = () => {
   return (
@@ -36,9 +37,10 @@ const Banner = () => {
           </p>
 
           <div className="mt-4 sm:mt-8 flex items-center gap-6">
-            <button
-              href="#"
-              className="hire-me btn bg-primary-color text-white hover:bg-primary-color hover:brightness-90 h-auto min-h-0 lg:text-base rounded-3xl py-2 lg:px-5"
+            <a
+              href={resume}
+              download="resume"
+              className="btn bg-primary-color text-white hover:bg-primary-color hover:brightness-90 h-auto min-h-0 lg:text-base rounded-3xl py-2 lg:px-5"
               data-aos="fade-up"
               data-aos-once={true}
               data-aos-delay="100"
@@ -46,7 +48,7 @@ const Banner = () => {
             >
               Resume
               <LuDownload />
-            </button>
+            </a>
 
             <div className="flex items-center gap-5 text-primary-color">
               <a
