@@ -1,3 +1,5 @@
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 import toast from "react-hot-toast";
 import { FaInstagram } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
@@ -7,6 +9,27 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
 
 const ContactMe = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_cmz0kzd", "template_all8fjc", form.current, {
+        publicKey: "UnP7mVj-PZo540gX4",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          toast.success("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error("Failed, Please try again!")
+        }
+      );
+  };
   return (
     <div id="contact" className="mb-10 pt-[4.375rem] sm:pt-[7.5rem]">
       <div className="max-w-[41.25rem] mx-auto text-center">
@@ -20,7 +43,7 @@ const ContactMe = () => {
 
       <div className="mt-10 flex flex-col-reverse md:flex-row gap-4 md:gap-6 justify-between">
         <div className="md:w-[48%]">
-          <form className="card-body p-0">
+          <form ref={form} onSubmit={sendEmail} className="card-body p-0">
             <p className="text-2xl font-semibold w-max mb-4" data-aos="fade-up" data-aos-delay="100">
               Get in touch
             </p>
