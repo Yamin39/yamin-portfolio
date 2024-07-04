@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router-dom";
 import heroShape from "../assets/images/hero-shape.webp";
 import Navbar from "../components/shared/Navbar/Navbar";
+import Footer from "../components/shared/Footer/Footer";
 
 // AOS.init();
 
@@ -48,6 +49,7 @@ const Root = () => {
         <div className="max-w-[1440px] w-10/12 mx-auto">
           <Outlet></Outlet>
         </div>
+        <Footer></Footer>
       </div>
 
       {/* custom cursor */}

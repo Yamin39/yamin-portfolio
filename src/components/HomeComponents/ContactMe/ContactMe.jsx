@@ -25,7 +25,7 @@ const ContactMe = () => {
               Get in touch
             </p>
             <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex-grow form-control">
+              <div className="flex-grow form-control" data-aos="fade-up" data-aos-delay="100">
                 <label htmlFor="firstName" className="label">
                   <span className="label-text text-base font-semibold">First name</span>
                 </label>
@@ -33,7 +33,7 @@ const ContactMe = () => {
                 <input name="firstName" id="firstName" type="text" placeholder="First name" className="input py-7 input-bordered rounded-2xl" required />
               </div>
 
-              <div className="flex-grow form-control">
+              <div className="flex-grow form-control" data-aos="fade-up" data-aos-delay="200">
                 <label htmlFor="lastName" className="label">
                   <span className="label-text text-base font-semibold">Last name</span>
                 </label>
@@ -42,7 +42,7 @@ const ContactMe = () => {
               </div>
             </div>
 
-            <div className="flex-grow form-control">
+            <div className="flex-grow form-control" data-aos="fade-up" data-aos-delay="300">
               <label htmlFor="email" className="label">
                 <span className="label-text text-base font-semibold">Email</span>
               </label>
@@ -50,7 +50,7 @@ const ContactMe = () => {
               <input name="email" id="email" type="email" placeholder="you@company.com" className="input py-7 input-bordered rounded-2xl" required />
             </div>
 
-            <div className="flex-grow form-control">
+            <div className="flex-grow form-control" data-aos="fade-up" data-aos-delay="300">
               <label htmlFor="phoneNumber" className="label">
                 <span className="label-text text-base font-semibold">Phone number</span>
               </label>
@@ -65,7 +65,7 @@ const ContactMe = () => {
               />
             </div>
 
-            <div className="flex-grow form-control">
+            <div className="flex-grow form-control" data-aos="fade-up" data-aos-delay="500">
               <label htmlFor="message" className="label">
                 <span className="label-text text-base font-semibold">Message</span>
               </label>
@@ -80,7 +80,7 @@ const ContactMe = () => {
               ></textarea>
             </div>
 
-            <div className="form-control mt-2">
+            <div className="form-control mt-2" data-aos="fade-up" data-aos-delay="100">
               <button className="btn bg-primary-color text-white hover:bg-primary-color hover:brightness-90 h-auto min-h-0 text-base rounded-xl py-3 xl:px-7 mt-4">
                 Send message
               </button>
