@@ -1,6 +1,6 @@
 const Education = () => {
   return (
-    <div id="educations" className="mb-10 pt-[4.375rem] sm:pt-[7.5rem]">
+    <div id="educations" className="pt-[4.375rem] sm:pt-[7.5rem]">
       <div className="max-w-[41.25rem] mx-auto text-center">
         <h1 className="text-primary-gradient text-[2.5rem] font-bold" data-aos="fade-up" data-aos-delay="100">
           My Education

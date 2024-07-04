@@ -2,6 +2,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
+import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router-dom";
 import heroShape from "../assets/images/hero-shape.webp";
 import Navbar from "../components/shared/Navbar/Navbar";
@@ -68,6 +69,8 @@ const Root = () => {
           }}
         />
       </div>
+
+      <Toaster />
     </div>
   );
 };
