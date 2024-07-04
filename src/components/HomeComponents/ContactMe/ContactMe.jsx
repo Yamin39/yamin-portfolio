@@ -103,7 +103,7 @@ const ContactMe = () => {
               ></textarea>
             </div>
 
-            <div className="form-control mt-2" data-aos="fade-up" data-aos-delay="100">
+            <div className="form-control mt-2">
               <button className="btn bg-primary-color text-white hover:bg-primary-color hover:brightness-90 h-auto min-h-0 text-base rounded-xl py-3 xl:px-7 mt-4">
                 Send message
               </button>

@@ -37,6 +37,14 @@ const Footer = () => {
         <li>
           <a
             className="hover:text-primary-color cursor-pointer hover:bg-transparent font-semibold"
+            onClick={() => document.getElementById("projects").scrollIntoView()}
+          >
+            Projects
+          </a>
+        </li>
+        <li>
+          <a
+            className="hover:text-primary-color cursor-pointer hover:bg-transparent font-semibold"
             onClick={() => document.getElementById("educations").scrollIntoView()}
           >
             Education
