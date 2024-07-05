@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { FaInstagram } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
@@ -10,9 +10,11 @@ import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
 
 const ContactMe = () => {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm("service_cmz0kzd", "template_all8fjc", form.current, {
@@ -23,10 +25,12 @@ const ContactMe = () => {
           console.log("SUCCESS!");
           toast.success("Message sent successfully!");
           form.current.reset();
+          setLoading(false);
         },
         (error) => {
-          console.log("FAILED...", error.text);
-          toast.error("Failed, Please try again!")
+          console.log("FAILED...", error?.text);
+          toast.error("Failed, Please try again!");
+          setLoading(false);
         }
       );
   };
@@ -104,7 +108,11 @@ const ContactMe = () => {
             </div>
 
             <div className="form-control mt-2">
-              <button className="btn bg-primary-color text-white hover:bg-primary-color hover:brightness-90 h-auto min-h-0 text-base rounded-xl py-3 xl:px-7 mt-4">
+              <button
+                className="btn bg-primary-color text-white hover:bg-primary-color hover:brightness-90 h-auto min-h-0 text-base rounded-xl py-3 xl:px-7 mt-4"
+                disabled={loading}
+              >
+                <span className={`loading loading-spinner ${loading ? "block" : "hidden"}`}></span>
                 Send message
               </button>
             </div>
