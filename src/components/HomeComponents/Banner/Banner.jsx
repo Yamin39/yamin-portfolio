@@ -5,7 +5,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
 import { Typewriter } from "react-simple-typewriter";
 import img from "../../../assets/images/yamin.jpg";
-import resume from "../../../assets/resume.pdf";
+import resume from "../../../assets/md-mufazzal-hossain-yamin_frontend-developer_resume.pdf";
 
 const Banner = () => {
   return (
@@ -38,8 +38,9 @@ const Banner = () => {
 
           <div className="mt-4 sm:mt-8 flex items-center gap-6">
             <a
+              // href="https://drive.google.com/uc?export=download&id=1jLWvOMOap1MGun3qCdrq4fISSUX0SSKh"
               href={resume}
-              download="resume"
+              download="md-mufazzal-hossain-yamin_frontend-developer_resume"
               className="btn bg-primary-color text-white hover:bg-primary-color hover:brightness-90 h-auto min-h-0 lg:text-base rounded-3xl py-2 lg:px-5"
               data-aos="fade-up"
               data-aos-once={true}
