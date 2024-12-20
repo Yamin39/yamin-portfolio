@@ -53,7 +53,7 @@ const Banner = () => {
 
             <div className="flex items-center gap-5 text-primary-color">
               <a
-                href="https://www.linkedin.com/in/mufazzal-hossain-yamin/"
+                href="https://www.linkedin.com/in/mh-yamin/"
                 target="_blank"
                 className="text-[1.375rem] p-[0.375rem] border-primary-color border rounded-full hover:bg-primary-color hover:text-white hover:shadow-xl active:scale-90 duration-300"
                 data-aos="fade-up"
